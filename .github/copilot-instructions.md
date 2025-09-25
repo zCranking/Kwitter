@@ -44,9 +44,10 @@ Kwitter (also known as Fritter) is a real-time web-based chat application that a
 
 ### CSS
 - Custom CSS in `style.css` overrides Bootstrap styles
-- Use gradient backgrounds and rounded corners for modern appearance
+- Use gradient backgrounds (`linear-gradient(to right top, #FE4A49, #A882DD, #1882c1, #61e786, #172a3a)`) for modern appearance
 - Responsive design with Bootstrap grid system
 - CSS animations and transitions for interactive elements
+- Semi-transparent overlays (`rgba(255,255,255,0.8)`) for content boxes
 
 ## Firebase Configuration
 - **Database**: Firebase Realtime Database
@@ -60,7 +61,8 @@ Kwitter (also known as Fritter) is a real-time web-based chat application that a
 2. **Room-based chat** - Users can create and join different chat rooms
 3. **Persistent login** - Username stored in localStorage
 4. **Responsive design** - Works on mobile and desktop
-5. **Visual branding** - Food/samosa theme with specific color scheme
+5. **Visual branding** - Food/samosa theme with vibrant gradient background
+6. **Simple UX** - Three-step flow: login → room selection → chat
 
 ## Development Guidelines
 
@@ -94,6 +96,9 @@ Kwitter (also known as Fritter) is a real-time web-based chat application that a
 2. **LocalStorage issues** - Verify browser storage permissions
 3. **Responsive layout problems** - Review Bootstrap grid implementation
 4. **Real-time updates not working** - Check Firebase listeners and database structure
+
+## Known Bugs
+- `kwitter_room.js:34` - `localStorage("room_name", name)` should be `localStorage.setItem("room_name", name)`
 
 ## Testing Approach
 - Manual testing across different browsers
